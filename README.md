@@ -25,7 +25,7 @@ Place your trade data CSV files inside a directory (e.g., `data/`). The files sh
 ### 2. Running the Program
 Modify the script parameters as needed and execute the script:
 ```sh
-python script.py
+python main.py
 ```
 
 ### 3. Configuring Time Intervals
@@ -53,24 +53,6 @@ The program generates an output CSV file containing OHLCV data with the followin
 - `Close`
 - `Volume`
 
-## Data Cleaning Report
-### Issues Identified
-1. **Missing Values:**
-   - Rows with missing timestamps, prices, or sizes are removed.
-2. **Incorrect Data Types:**
-   - Non-numeric values in price or size columns are ignored.
-3. **Negative or Zero Values:**
-   - Trades with price or size <= 0 are discarded.
-4. **Duplicates:**
-   - Entries with the same timestamp, price, and size are removed.
-5. **Trading Hours:**
-   - Only trades between 09:30 and 16:00 are considered.
-
-## Assumptions & Limitations
-- Data files must be in CSV format with correctly named columns.
-- The program assumes timestamps are in `YYYY-MM-DD HH:MM:SS.sss` format.
-- Aggregation is performed based on time-based bins and does not include custom logic for tick-based aggregation.
-- The system works only within regular trading hours (09:30 - 14:00).
 
 ## **Data Cleaning Report**  
 
