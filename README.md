@@ -10,10 +10,10 @@ This data processing interface loads, cleans, and aggregates market trade data f
 - Exports the aggregated data to a CSV file.
 
 ## Requirements
-- Python 3.x
+- Python 3.12.9
 
 ## Installation
-No special installation is required. Simply ensure you have Python installed and have your trade data stored in a directory.
+Ensure you have Python 3.12.9 and the packages namely, os, csv, datetime and re will be preinstalled.
 
 ## Usage
 ### 1. Prepare Your Data
