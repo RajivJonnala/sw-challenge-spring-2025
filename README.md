@@ -13,7 +13,7 @@ This data processing interface loads, cleans, and aggregates market trade data f
 - Python 3.12.9
 
 ## Installation
-Ensure you have Python 3.12.9 and the packages namely, os, csv, datetime and re will be preinstalled.
+Ensure you have [Python 3.12.9](https://www.python.org/downloads/). and the packages namely, os, csv, datetime and re will be preinstalled.
 
 ## Usage
 ### 1. Prepare Your Data
@@ -74,3 +74,9 @@ The program generates an output CSV file containing OHLCV data with the followin
 
 ## Author
 Rajiv Jonnala
+
+
+
+
+
+
