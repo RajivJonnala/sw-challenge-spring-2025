@@ -70,13 +70,18 @@ The program generates an output CSV file containing OHLCV data with the followin
 - Data files must be in CSV format with correctly named columns.
 - The program assumes timestamps are in `YYYY-MM-DD HH:MM:SS.sss` format.
 - Aggregation is performed based on time-based bins and does not include custom logic for tick-based aggregation.
-- The system works only within regular trading hours (09:30 - 16:00).
+- The system works only within regular trading hours (09:30 - 14:00).
+
+## **Data Cleaning Report**  
+
+The data cleaning process was designed to ensure data integrity, accuracy, and consistency before aggregation into OHLCV bars. Several key issues were identified and addressed systematically. First, records with missing values in essential fields (`Timestamp`, `Price`, or `Size`) were discarded, as incomplete data could lead to inaccurate analysis. Next, strict type conversion was applied to enforce correct data formats; timestamps were parsed into proper datetime objects, `Price` values were converted to floats, and `Size` values to integers. Any records failing these conversions were removed. Additionally, non-positive trade values (i.e., `Price ≤ 0` or `Size ≤ 0`) were eliminated to prevent invalid calculations from affecting market analysis.  
+
+Duplicate trades, identified using a unique combination of `(timestamp, price, size)`, were also removed to avoid over-representation of certain transactions. Another critical step involved filtering out trades occurring outside regular market hours (09:30 - 16:00), ensuring that only relevant market activity was considered. These anomalies were detected using predefined criteria, including format validation, numerical range checks, duplicate identification, and timestamp filtering based on exchange hours.  
+
+The rationale behind these cleaning decisions was to enhance the dataset’s reliability and usability for financial analysis. Removing incomplete and erroneous data ensured consistency, while filtering out anomalies prevented distortions in price and volume trends. By enforcing trading hour restrictions, the dataset remained aligned with standard market operations, making it suitable for meaningful OHLCV aggregation and further analysis. These steps collectively contributed to a cleaner, more robust dataset that accurately reflects intraday market activity.
 
 ## Author
 Rajiv Jonnala
-
-
-
 
 
 
