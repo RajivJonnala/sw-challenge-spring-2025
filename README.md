@@ -72,9 +72,5 @@ The program generates an output CSV file containing OHLCV data with the followin
 - Aggregation is performed based on time-based bins and does not include custom logic for tick-based aggregation.
 - The system works only within regular trading hours (09:30 - 16:00).
 
-## License
-This project is free to use and modify.
-
 ## Author
-Your Name
-
+Rajiv Jonnala
