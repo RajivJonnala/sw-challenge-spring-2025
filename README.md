@@ -22,13 +22,8 @@ Place your trade data CSV files inside a directory (e.g., `data/`). The files sh
 - `Price` (float)
 - `Size` (integer)
 
-### 2. Running the Program
-Modify the script parameters as needed and execute the script:
-```sh
-python main.py
-```
 
-### 3. Configuring Time Intervals
+### 2. Configuring Time Intervals
 The aggregation interval is defined using a string format:
 - `1s` -> 1 second
 - `1m` -> 1 minute
@@ -42,6 +37,11 @@ interval = "1m"  # Set aggregation interval
 start = "2024-09-16 09:30:00"
 end = "2024-09-16 16:00:00"
 output = "ohlcv_1m.csv"
+```
+### 3. Running the Program
+Modify the script parameters as needed and execute the script:
+```sh
+python main.py
 ```
 
 ### 4. Output File
